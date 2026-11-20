@@ -2,13 +2,13 @@
 # After the calibration videos (left.mp4 and right.mp4) have been copied to the "calibration" directory, 
 # and the observation videos (left.mp4 and right.mp4) have been copied to the "observations" directory.
 
-calibrateCameras(img.dir = cal_dir, 
-                 nx = 8,               # number of horizontal inner corners 
-                 ny = 6,               # number of vertical inner corners  
-                 sq.size = "3.04 cm", # square size
-                 cal.file = 'calibration.txt',
-                 corner.dir = 'corners', verify.dir = 'verify', error.dir = 'errors',
-                 undistort = TRUE, num.aspects.read = 50, fit.min.break = 2, nlm.calls.max = 15,
+calibrateCameras(img.dir = cal_dir,                    # name of the calibration file
+                 nx = 8,                               # number of horizontal inner corners 
+                 ny = 6,                               # number of vertical inner corners  
+                 sq.size = "3.04 cm",                  # square size
+                 cal.file = 'calibration.txt',         # name of the calibration file 
+                 undistort = TRUE, num.aspects.read = 50, 
+                 fit.min.break = 2, nlm.calls.max = 15,
                  objective.min = 0.8, max.sample.optim = 30, num.sample.est = 20,
                  num.aspects.sample = 4, num.sample.sets = 3, objective.min.break = 1.2)
 
